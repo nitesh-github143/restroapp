@@ -6,6 +6,7 @@ import LoginAs from '../pages/LoginAs';
 import LoginPage from '../pages/LoginPage';
 import Signup from '../pages/Signup';
 import OTPScreen from '../pages/OTPScreen';
+import Home from '../pages/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,11 @@ const StackNavigation = () => {
         <Stack.Screen
           name="OTPScreen"
           component={OTPScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

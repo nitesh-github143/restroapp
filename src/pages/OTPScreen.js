@@ -1,5 +1,4 @@
 import {useNavigation} from '@react-navigation/native';
-import CheckBox from '@react-native-community/checkbox';
 import OTPTextInput from 'react-native-otp-textinput';
 import React, {useState} from 'react';
 import {
@@ -9,9 +8,9 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
-import InputBox from '../components/InputBox';
 
 const OTPScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.main_container}>
       <View style={styles.inner_container}>
@@ -56,13 +55,10 @@ const OTPScreen = () => {
       <View style={styles.bottom_container}>
         <TouchableOpacity
           style={styles.button}
-          //   onPress={() => navigation.navigate('OTPScreen')}
-        >
+          onPress={() => navigation.navigate('Home')}>
           <Text style={styles.btn_text}>Verify</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Signup')}
-          style={{marginTop: 20, marginBottom: 30}}>
+        <TouchableOpacity style={{marginTop: 20, marginBottom: 30}}>
           <Text style={{color: '#FFFFFF', fontFamily: 'Inter-Bold'}}>
             Didn’t receive any code?{' '}
             <Text

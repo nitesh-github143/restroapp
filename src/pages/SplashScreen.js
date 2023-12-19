@@ -7,7 +7,7 @@ const SplashScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('LoginAs');
-    }, 2000);
+    }, 500);
   });
   return <View style={{flex: 1, backgroundColor: '#000000'}}></View>;
 };

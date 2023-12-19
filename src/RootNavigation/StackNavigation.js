@@ -7,6 +7,9 @@ import LoginPage from '../pages/LoginPage';
 import Signup from '../pages/Signup';
 import OTPScreen from '../pages/OTPScreen';
 import Home from '../pages/Home';
+import TapToScan from '../pages/TapToScan';
+import Cart from '../pages/Cart';
+import Restaurants from '../pages/Restaurants';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +46,21 @@ const StackNavigation = () => {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="TapToScan"
+          component={TapToScan}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Restaurants"
+          component={Restaurants}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

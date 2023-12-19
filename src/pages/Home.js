@@ -1,6 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import CheckBox from '@react-native-community/checkbox';
 import OTPTextInput from 'react-native-otp-textinput';
+import Icon from 'react-native-vector-icons/Ionicons';
 import React, {useState} from 'react';
 import {
   Text,
@@ -102,6 +103,7 @@ const Home = () => {
             }}>
             Tandoori
           </Text>
+          {/* <Icon name="male" size={14} color="#FFD700" /> */}
           <Text
             style={{
               fontFamily: 'Inter-Regular',
@@ -113,6 +115,8 @@ const Home = () => {
               paddingVertical: 2,
               borderRadius: 4,
             }}>
+            <Image source={require('../assets/images/star.png')} />
+            {'  '}
             4.3(23)
           </Text>
         </View>
@@ -142,6 +146,13 @@ const Home = () => {
             fontFamily: 'Inter-Regular',
             lineHeight: 12,
           }}>
+          <View>
+            <Image
+              source={require('../assets/images/location.png')}
+              style={{paddingRight: 5}}
+            />
+          </View>
+          {'  '}
           {item.location}
         </Text>
       </View>
@@ -251,7 +262,6 @@ const styles = StyleSheet.create({
   main_container: {
     flex: 1,
     backgroundColor: '#1D1D1D',
-    color: '#FFF',
   },
   header_container: {
     flexDirection: 'row',
